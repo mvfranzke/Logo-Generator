@@ -39,10 +39,10 @@ class Circle extends Shape {
 
 class Square extends Shape {
   render(logoText, logoColor) {
-    return `<rect x="50" y="50" width="200" height="100" fill="${this.color}"/>`;
+    const shapeElement = `<rect x="50" y="50" width="200" height="100" fill="${this.color}"/>`;
+    const textElement = this.createTextElement(logoText, logoColor);
+    return this.createShapeElement(shapeElement, textElement);
   }
 }
 
 module.exports = {Shape, Triangle, Circle, Square};
-
-hello
