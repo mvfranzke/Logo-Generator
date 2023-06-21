@@ -10,11 +10,11 @@ const generateLogo = () => {
   inquirer
   .prompt ([
     {
-      name: "logotext",
+      name: "logoText",
       message: 'Please enter text for your logo (Note: maximum of 3 characters only)',
       validate: (input) => {
         if (input.length > max_length) {
-          return 'Logo Text should be maximim on 3 characters.';}
+          return 'Logo Text should be maximim of 3 characters.';}
         return true;
         },
     },
@@ -36,6 +36,7 @@ const generateLogo = () => {
     const {logoText, logoColor, shape, shapeColor} = answers;
     
     let shapeInstance;
+
     switch(shape) {
       case 'circle':
         shapeInstance = new Circle();
@@ -46,14 +47,15 @@ const generateLogo = () => {
       case 'square':
         shapeInstance = new Square();
         break;
-         throw new Error('Invalid shape: ${shape}');
+      default:
+         throw new Error(`Invalid shape: ${shape}`);
     }
 
-shapeInstance.setcolor(shapeColor);
+    shapeInstance.setColor(shapeColor);
 
-const svgContent = shapeInstance.render(logoText, logoColor);
-fs.writeFileSync('logo.svg', svgContent);
-console.log('Generated logo.svg');
+    const svgContent = shapeInstance.render(logoText, logoColor);
+    fs.writeFileSync('logo.svg', svgContent);
+    console.log('Generated logo.svg');
 
   }
 
