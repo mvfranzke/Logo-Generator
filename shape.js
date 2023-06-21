@@ -25,7 +25,7 @@ createTextElement(logoText, logoColor) {
 class Triangle extends Shape {
   render(logoText, logoColor) {
     //sets the polygon points to create triangle shape and render the color
-    const shapeElement = `<polygon points= "150, 18 244, 182 56, 182" fill="${this.color}"/>`;
+    const shapeElement = `<polygon points="150, 18 244, 182 56, 182" fill="${this.color}"/>`;
     //created the logo inside the shape, parametes logotext and logocolor added
     const textElement = this.createTextElement(logoText, logoColor);
     //combines shape and text
