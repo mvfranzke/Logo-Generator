@@ -6,10 +6,11 @@ const {Shape, Triangle, Circle, Square} = require('./shape');
 //user can only input maximum of 3 characters on the logo text
 const max_length = 3;
 
+//function to generate logo
 const generateLogo = () => {
   inquirer
   .prompt ([
-    {
+    { // prompt to ask user for the text to be put in the logo
       name: "logoText",
       message: 'Please enter text for your logo (Note: maximum of 3 characters only)',
       validate: (input) => {
@@ -17,49 +18,58 @@ const generateLogo = () => {
           return 'Logo Text should be maximim of 3 characters.';}
         return true;
         },
-    },
+    }, // prompt to ask user for the text color
     { name: 'logoColor',
       message: 'Enter the text color (color name or hexadecinal number)',
     },
-    {
+    { //prompt to ask user for shape they want
       name: 'shape',
       message: 'Choose from the three shape below.',
       type: 'list',
       choices: ['circle', 'triangle', 'square'],
     },
-    {
+    { //prompt to ask user for the color to fill the shapes
       name: 'shapeColor',
       message: 'Enter the shape color (color name or hexadecinal number)',
     }
   ])
-  .then ((answers) => {
-    const {logoText, logoColor, shape, shapeColor} = answers;
+  .then ((userInput) => {
+    //deconstruct users answer on the prompts
+    const {logoText, logoColor, shape, shapeColor} = userInput;
     
-    let shapeInstance;
+    //variable to determine final shapes
+    let shapeGenerator;
 
-    switch(shape) {
-      case 'circle':
-        shapeInstance = new Circle();
+    //switch statement to create the shape based from user input
+    switch (shape) {
+      case "circle":
+        //Circle class imported from shape.js
+        shapeGenerator = new Circle();
         break;
-      case 'triangle':
-        shapeInstance = new Triangle();
+      case "triangle":
+        //Triangle class imported from shape.js
+        shapeGenerator = new Triangle();
         break;
-      case 'square':
-        shapeInstance = new Square();
+      case "square":
+        //Square class imported from shape.js
+        shapeGenerator = new Square();
         break;
       default:
-         throw new Error(`Invalid shape: ${shape}`);
+        throw new Error(`Invalid shape: ${shape}`);
     }
 
-    shapeInstance.setColor(shapeColor);
+    //sets the shape color fill
+    shapeGenerator.setColor(shapeColor);
 
-    const svgContent = shapeInstance.render(logoText, logoColor);
+    //creates the logo.svg file 
+    const svgContent = shapeGenerator.render(logoText, logoColor);
     fs.writeFileSync('logo.svg', svgContent);
     console.log('Generated logo.svg');
 
   }
 
   )
+  //message to prompt for any error
   .catch((error) => {
     console.log('Please try again', error);
   }
@@ -67,4 +77,5 @@ const generateLogo = () => {
   );
 };
 
+//initialize generateLogo function
 generateLogo();
