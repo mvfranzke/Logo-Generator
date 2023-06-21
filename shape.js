@@ -31,7 +31,9 @@ class Triangle extends Shape {
 
 class Circle extends Shape {
   render(logoText, logoColor) {
-    return `<circle cx="150" cy="100" r="80" fill="${this.color}"/>`;
+    const shapeElement = `<circle cx="150" cy="100" r="80" fill="${this.color}"/>`;
+    const textElement = this.createTextElement(logoText, logoColor);
+    return this.createShapeElement(shapeElement, textElement);
   }
 }
 
