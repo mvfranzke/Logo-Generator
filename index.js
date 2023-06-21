@@ -16,8 +16,8 @@ const generateLogo = () => {
         if (input.length > max_length) {
           return 'Logo Text should be maximim on 3 characters.';}
         return true;
+        },
     },
-  },
     { name: 'logoColor',
       message: 'Enter the text color (color name or hexadecinal number)',
     },
@@ -26,11 +26,11 @@ const generateLogo = () => {
       message: 'Choose from the three shape below.',
       type: 'list',
       choices: ['circle', 'triangle', 'square'],
-    }
+    },
     {
       name: 'shapeColor',
       message: 'Enter the shape color (color name or hexadecinal number)',
-    },
+    }
   ])
   .then ((answers) => {
     const {logoText, logoColor, shape, shapeColor} = answers;
@@ -66,5 +66,3 @@ console.log('Generated logo.svg');
 };
 
 generateLogo();
-
-
