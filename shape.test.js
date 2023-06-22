@@ -31,3 +31,14 @@ describe ('Circle', () => {
 
 
 //text for square
+describe("Square", () => {
+  test("Square should render SVG content MVF, black font and yellow background", () => {
+    const shape = new Square();
+    shape.setColor("yellow");
+    const logoText = "MVF";
+    const logoColor = "black";
+    expect(shape.render(logoText, logoColor)).toEqual(
+      '<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="50" width="200" height="100" fill="yellow"/><text x="150" y="110" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="48" fill="black">MVF</text></svg>'
+    );
+  });
+});
