@@ -32,15 +32,10 @@ npm run test
 
 URL of Github repository : https://github.com/mvfranzke/Logo-Generator
 
-Video Link (user flow): 
+Video Link (user flow): https://drive.google.com/file/d/1jCyyVu1zKicMkUt-9tGtRsUNG-j6Wylo/view
 
 ## Credits
 I've used the references and SVG resources provided to us to complete the assignment:
-
-<https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Introduction>
-<https://marketplace.visualstudio.com/items?itemName=jock.svg>
-<https://github.com/SBoudrias/Inquirer.js>
-<https://jestjs.io/>
 
 * [Example SVG](https://static.fullstack-bootcamp.com/fullstack-ground/module-10/circle.svg)
 
@@ -56,7 +51,9 @@ I've used the references and SVG resources provided to us to complete the assign
 
 Below are the youtube tutorial I also used to complete this assignment:
 
-<https://www.youtube.com/watch?v=ajiAl5UNzBU>
+* <https://www.youtube.com/watch?v=ajiAl5UNzBU>
+
+* <https://www.youtube.com/watch?v=GJYMcLus3v0>
 
 ## License
 N/A
