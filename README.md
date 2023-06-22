@@ -35,16 +35,28 @@ URL of Github repository : https://github.com/mvfranzke/Logo-Generator
 Video Link (user flow): 
 
 ## Credits
-I've used the following in completing this project:
+I've used the references and SVG resources provided to us to complete the assignment:
 
-- https://www.npmjs.com/package/inquirer#reactive
-- https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
-- https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide
+<https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Introduction>
+<https://marketplace.visualstudio.com/items?itemName=jock.svg>
+<https://github.com/SBoudrias/Inquirer.js>
+<https://jestjs.io/>
 
-Youtube Tutorials:
-- https://youtu.be/P3aKRdUyr0s
-- https://www.youtube.com/watch?v=PGAGcePjbPA
+* [Example SVG](https://static.fullstack-bootcamp.com/fullstack-ground/module-10/circle.svg)
 
+* [Scalable Vector Graphics (SVG)](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)
+
+* [SVG tutorial](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial)
+
+* [Basic SVG shapes](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes)
+
+* [Text in SVG](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Texts)
+
+* [SVG VS Code extension](https://marketplace.visualstudio.com/items?itemName=jock.svg)
+
+Below are the youtube tutorial I also used to complete this assignment:
+
+<https://www.youtube.com/watch?v=ajiAl5UNzBU>
 
 ## License
 N/A
